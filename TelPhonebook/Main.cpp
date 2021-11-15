@@ -1,21 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <conio.h>
 #include "Util.h"
+#include "PersonArray.h"
 
 int main() {
+	PersonArray pa;
 	int run = 1;
+	InitPersonArray(&pa);
 	while (run) {
 		Menu();
-		printf("메뉴를 선택하세요\n");
-		char sel = getchar();
+		printf("메뉴를 선택하세요 : ");
+		char sel = getchar(); Flush();
+		//char sel = _getch();
 		switch (sel)
 		{
 		case '1':
-			printf("기능1\n");
+			AddPersonArray(&pa);
 			break;
 		case '2':
-			printf("기능2\n");
+			PrintPersonArray(&pa);
 			break;
 		case '3':
 			printf("기능3\n");
@@ -32,4 +37,6 @@ int main() {
 
 		}
 	}
+
+	UninitPersonArray(&pa);
 }
