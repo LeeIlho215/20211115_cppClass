@@ -1,24 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-
-void Menu() {
-	puts("=====================");
-	puts("1. 전화번호 등록");
-	puts("2. 전화번호 삭제");
-	puts("3. 전화번호 갬석");
-	puts("4. 전화번호 식제");
-	puts("5. 전화번호 txt파일 출력");
-	puts("0. 프로그램 종료");
-	puts("=====================");
-}
+#include "Util.h"
 
 int main() {
 	int run = 1;
 	while (run) {
-		printf("메뉴를 선택하세요\n");
 		Menu();
+		printf("메뉴를 선택하세요\n");
 		char sel = getchar();
 		switch (sel)
 		{
